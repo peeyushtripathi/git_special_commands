@@ -1,0 +1,45 @@
+after forking
+go to your local branch
+
+create another branch to solve bug or feature
+git checkout -b "mybranch_from_myMain"
+
+isme changes git add.. git commit.. git push karke changes mne apni branch ke remote mai push kar diye
+(mylocalrepo--> main, mybranch_from_myMain)
+code sirf mybranch_from_myMain me aega...
+
+uske baad pull(merge request bna ke website ke help se hum changes directly open source ke "main" mai push kar dete hai)
+
+
+
+ab hmaari feature branch to upto date hai... lekin hmmari main branch... opensource waale main ke saath sync mai nhi hai
+(PR ke merge ke baad waise bhi feature branch delete ho jaati hai)
+
+to open source repo ke main se apne git ke main ko kaise sync karen?????
+
+git switch main 
+
+(aapka local main hai)
+
+usko theek karne ke uppae
+
+git remote add upstream "remote repo ka path"    
+
+upstream naam de rhe hai usko
+jaise origin rakte hai .. kuch or bhi rakh sakte hai isse ek link bann jaega
+isse jab hum git remote -v karenge to wo remote waali git repo ko bhi dikhaaane lgega
+
+git fetch all
+git merge upstream/main
+
+or
+
+git pull upstream main
+
+
+
+git push 
+or
+git push origin main 
+ye dono hi kaam karengi
+ab ye mere remote ko update kar dega
